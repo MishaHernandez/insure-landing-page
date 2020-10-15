@@ -1,0 +1,18 @@
+.footer__info {
+
+    &-title {
+        color: var(--dark-grayish-violet);
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    &-link {
+        text-decoration: none;
+        color: var(--very-dark-violet);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+    }
+}

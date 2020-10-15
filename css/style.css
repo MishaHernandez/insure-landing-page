@@ -347,17 +347,6 @@ template {
   --dm-serif: "DM Serif Display", serif;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-family: var(--karla);
-}
-
 @font-face {
   font-family: "DM Serif Display";
   font-weight: 400;
@@ -373,15 +362,15 @@ body {
   font-weight: 700;
   src: url("../fonts/Karla-Bold.ttf") format("truetype");
 }
-.main {
-  text-align: center;
-  background: url(../images/bg-pattern-intro-left-mobile.svg) no-repeat left 450px, url(../images/bg-pattern-intro-right-mobile.svg) no-repeat right 750px;
-  margin-bottom: 8.5rem;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
-.main .line {
-  border-top: 0;
-  border-color: #000;
-  width: 40%;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: var(--karla);
 }
 
 .button {
@@ -409,6 +398,17 @@ body {
 
 .menu__list {
   display: none;
+}
+
+.content {
+  text-align: center;
+  background: url(../images/bg-pattern-intro-left-mobile.svg) no-repeat left 450px, url(../images/bg-pattern-intro-right-mobile.svg) no-repeat right 750px;
+  margin-bottom: 8.5rem;
+}
+.content .line {
+  border-top: 0;
+  border-color: #000;
+  width: 40%;
 }
 
 .banner {
@@ -444,6 +444,19 @@ body {
   margin-bottom: 4.8rem;
 }
 
+.main__info {
+  margin: 1.6rem;
+  padding-top: 2rem;
+  line-height: 1;
+  background: var(--dark-violet) url(../images/bg-pattern-how-we-work-mobile.svg) no-repeat right;
+  color: var(--very-light-gray);
+}
+.main__info-title {
+  font-family: var(--dm-serif);
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
 .skills {
   margin-bottom: 8.8rem;
 }
@@ -463,19 +476,6 @@ body {
   margin-bottom: 3.5rem;
 }
 
-.main__info {
-  margin: 1.6rem;
-  padding-top: 2rem;
-  line-height: 1;
-  background: var(--dark-violet) url(../images/bg-pattern-how-we-work-mobile.svg) no-repeat right;
-  color: var(--very-light-gray);
-}
-.main__info-title {
-  font-family: var(--dm-serif);
-  font-size: 2.5rem;
-  font-weight: 400;
-}
-
 .footer {
   text-align: center;
   text-transform: uppercase;
@@ -488,7 +488,6 @@ body {
   border-color: #d2d2d2;
   width: 85%;
 }
-
 .footer__social {
   display: flex;
   justify-content: center;
@@ -499,6 +498,14 @@ body {
 .footer__social-img {
   margin-left: 8px;
   margin-right: 8px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
 }
 
 .footer__info-title {
@@ -514,14 +521,6 @@ body {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1.5px;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: #3e52a3;
 }
 
 /*# sourceMappingURL=style.css.map */
