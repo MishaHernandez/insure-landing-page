@@ -1,12 +1,61 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
-}
+    padding: 1rem 1.5rem 1rem 1.5rem;
 
-.menu {
-    &__list {
-        display: none;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include desktop {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__menu {
+
+        &-icon {
+            cursor: pointer;
+
+            @include desktop {
+                display: none;
+            }
+        }
+
+        &-list {
+            display: none;
+            list-style-type: none;
+
+            @include desktop {
+                display: flex;
+                align-items: center;
+                margin: 0;
+            }
+        }
+
+        &-link {
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-left: 14px;
+            margin-right: 14px;
+            color: var(--dark-grayish-violet);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+
+            @include desktop {
+                &:hover {
+                    color: var(--dark-violet);
+                }
+            }
+        }
     }
 }

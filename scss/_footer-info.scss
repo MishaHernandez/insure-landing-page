@@ -14,5 +14,11 @@
         font-size: 14px;
         font-weight: 700;
         letter-spacing: 1.5px;
+
+        @include desktop {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
