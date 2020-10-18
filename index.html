@@ -20,8 +20,8 @@
       <img class="navbar__logo" src="images/logo.svg" alt="logo">
 
       <div class="navbar__menu">
-        <img class="navbar__menu-icon" src="images/icon-hamburger.svg" alt="menu icon">
-        <ul class="navbar__menu-list">
+        <img class="navbar__menu-icon" id="menu-icon" src="images/icon-hamburger.svg" alt="menu icon">
+        <ul class="navbar__menu-list" id="menu">
           <li><a class="navbar__menu-link" href="#">How we work</a></li>
           <li><a class="navbar__menu-link" href="#">Blog</a></li>
           <li><a class="navbar__menu-link" href="#">Account</a></li>
@@ -159,6 +159,20 @@
 
   <script>
     
+    const menuIcon = document.getElementById('menu-icon');
+    const menu = document.getElementById('menu');
+
+    menuIcon.addEventListener('click', ()=> {
+
+      if (menu.classList.contains('menu-show')) {
+        menuIcon.setAttribute('src', 'images/icon-hamburger.svg');
+        menu.classList.remove('menu-show');
+      } else {
+        menuIcon.setAttribute('src', 'images/icon-close.svg');
+        menu.classList.add('menu-show');
+      }
+    })
+
   </script>
 </body>
 </html>
